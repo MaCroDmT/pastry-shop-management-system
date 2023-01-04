@@ -1,0 +1,85 @@
+create table manager (M_id Number (20) not null primary key,
+ 				M_salary Number(30),
+				 M_Phonenumber1 Number(30),
+				  M_Phonenumber2 Number(30),
+ 				   M_name varchar2(30),
+		                commission number(20));
+
+CREATE SEQUENCE manager_mid
+  INCREMENT BY 1
+  	START WITH 1
+  	MAXVALUE 100
+ 	NOCACHE
+  	NOCYCLE;
+
+for describing table///  desc manager;
+
+create table shop (Shop_id Number (20) not null primary key,
+                    Shop_loaction varchar2(30),
+				Shop_name varchar2(30),
+				  M_id number (30), 
+			 constraint mi foreign key (M_id) references manager (M_id));
+
+CREATE SEQUENCE shop_shopid
+  INCREMENT BY 1
+  	START WITH 1
+  	MAXVALUE 1000
+ 	NOCACHE
+  	NOCYCLE;
+
+desc shop;
+
+// DROP SEQUENCE shop_shopid;
+
+create table employee(E_id Number (20) not null primary key, 
+				E_name varchar2(30), 
+				  E_salary number(20),
+				   E_phonenumber1 Number(30),
+ 				    E_phonenumber2 Number(30),
+ 					Shop_id Number(20), 
+				constraint si foreign key (Shop_id) references shop (Shop_id));
+
+desc employee;
+
+create table itemvalidity(Item_validity varchar2(30) not null primary key,
+                      Production_date Date,
+                      Expire_date Date);
+
+desc itemvalidity;
+
+create table Factory( Factory_id Number (20) not null primary key,
+                       Factory_name varchar2 (30),
+                        Factory_address varchar2 (30));
+desc Factory;
+
+create table Payment( Payment_id Number (20) not null primary key,
+                       Payment_date Date,
+                        Amount Number (30));
+
+desc Payment;
+
+create table Customer(Customer_id Number (20) not null primary key,
+                       C_Phonenumber1 Number (30),
+                        C_Phonenumber2 Number (30),
+				 C_Name varchar2 (30),
+                          C_Emailaddress1 varchar2 (30),
+                           C_Emailaddress2 varchar2 (30),
+                            Customeraddress varchar2(30),
+                             Payment_id Number (20),
+                              constraint pi foreign key (Payment_id) references Payment (Payment_id));
+
+desc Customer;
+
+create table Item( Item_Id Number (20) not null primary key,
+                    Item_name varchar2 (30),
+                     I_Price Number (20),
+                      Shop_id Number (20),
+                       Factory_id Number (20),
+                        Customer_id Number (20),
+                         Item_validity varchar2(30),
+constraint sis foreign key (Shop_id) references Shop (Shop_id),
+constraint fi foreign key (Factory_id) references Factory (Factory_id),
+constraint ci foreign key (Customer_id) references Customer (Customer_id),
+constraint iv foreign key (Item_validity) references itemvalidity (Item_validity));
+
+desc Item;

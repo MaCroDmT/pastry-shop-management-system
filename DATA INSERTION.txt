@@ -1,0 +1,109 @@
+for manager table
+
+insert into manager values(001,50000,01745547578,01747547575,'PROTTOY',5000);
+
+for shop table
+
+insert into shop values(110,'GULSHAN','ORBIT PASTRY SHOP',1);
+
+for employee table
+
+insert into employee values(200,'REZOAN',20000,1928305531,1945578943,110);
+insert into employee values(201,'MASUM',22000,1526209531,1935587803,110);
+insert into employee values(202,'PROGGA',25000,1728303132,1943578943,110);
+insert into employee values(203,'FARDIN',25000,1828325531,1941278743,110);
+insert into employee values(204,'KOUSHIK',25000,13284325930,1935778943,110);
+insert into employee values(205,'PIKU',25000,1748305531,1445578943,110);
+insert into employee values(206,'SAIKAT',25000,1526309931,1945548949,110);
+insert into employee values(207,'SHOVON',18000,1928305531,1945578443,110);
+insert into employee values(208,'ROWDRA',30000,1929304531,1645578943,110);
+insert into employee values(209,'HANIF',28000,1328355531,1745578943,110);
+insert into employee values(210,'ANGSHU',27000,1528305531,1742578943,110);
+
+for itemvalidity
+
+insert into itemvalidity values('two days',to_date('21-DEC-2022'),to_date('23-DEC-2022'));
+insert into itemvalidity values('three days',to_date('21-DEC-2022'),to_date('24-DEC-2022'));
+insert into itemvalidity values('four days',to_date('21-DEC-2022'),to_date('25-DEC-2022'));
+insert into itemvalidity values('five days',to_date('21-DEC-2022'),to_date('26-DEC-2022'));
+insert into itemvalidity values('six days',to_date('21-DEC-2022'),to_date('27-DEC-2022'));
+insert into itemvalidity values('one days',to_date('21-DEC-2022'),to_date('22-DEC-2022'));
+insert into itemvalidity values('seven days',to_date('21-DEC-2022'),to_date('28-DEC-2022'));
+insert into itemvalidity values('eight days',to_date('21-DEC-2022'),to_date('29-DEC-2022'));
+
+for factory
+
+insert into factory values(300,'ORBIT BAKERY INDUSTRY','GAZIPUR');
+
+for payment
+
+insert into payment values(501,to_date('22-DEC-2022'),500);
+insert into payment values(502,to_date('23_DEC-2022'),1020);
+insert into payment values(503,to_date('22_DEC-2022'),4000);
+insert into payment values(505,to_date('23_DEC-2022'),970);
+insert into payment values(506,to_date('24_DEC-2022'),5420);
+insert into payment values(507,to_date('22_DEC-2022'),1000);
+insert into payment values(508,to_date('21_DEC-2022'),2000);
+insert into payment values(509,to_date('22_DEC-2022'),6000);
+insert into payment values(510,to_date('23_DEC-2022'),600);
+insert into payment values(511,to_date('22_DEC-2022'),3000);
+insert into payment values(512,to_date('22_DEC-2022'),1000);
+insert into payment values(513,to_date('26_DEC-2022'),1500);
+insert into payment values(514,to_date('25_DEC-2022'),2500);
+
+
+FOR customer
+
+insert into customer values(700,123789456,456789321,'SANJIB','sanjib3366161@gmail.com','sanjib123@gmail.com','BANANI',503);
+insert into customer values(701,122714456,456781321,'PRONOY','pronoy61@gmail.com','pronoy3@gmail.com','UTTARA',501);
+insert into customer values(702,122714456,456781321,'BABITA','babita99@gmail.com','babita@gmail.com','MIRPUR',505);
+insert into customer values(703,112734459,450731301,'BONHI','bonhi19@gmail.com','bonhi@gmail.com','NIKUNJA',502);
+insert into customer values(704,102715056,459781021,'PRATAP','pratap6189@gmail.com','pratap30@gmail.com','BADDA',509);
+insert into customer values(705,990126756,5567801321,'ABRAR','muhtasib01@gmail.com','muhtasib3@gmail.com','UTTARA',506);
+insert into customer values(706,770126756,9567801321,'Tanmoy','tanmoy01@gmail.com','tanmoy3@gmail.com','BADDA',507);
+insert into customer values(707,710120756,5567120131,'PEYASH','peyash01@gmail.com','peyash3@gmail.com','NIKUNJA',508);
+insert into customer values(708,330126756,5676618921,'SHOWRAV','showrav91@gmail.com','showrav30@gmail.com','UTTARA',510);
+insert into customer values(709,990185376,7919451321,'SHATHI','shathi97@gmail.com','shathi87@gmail.com','KURIL',511);
+insert into customer values(710,173782756,24567801321,'GOUROB','gourob9591@gmail.com','gourob3025@gmail.com','BADDA',512);
+
+//////////// some mistake occures so update korsilam \\\\\But eigula project e likhbo na***
+update customer 
+set customer_id=707
+where payment_id=50;
+
+delete from customer where customer_id=704;
+
+
+FOR ITEM
+
+insert into Item values(800,'RED VELVET PASTRY',300,110,300,700,'one days');
+insert into Item values(801,'BLACK FOREST PASTRY',210,110,300,701,'one days');
+insert into Item values(802,'VANILA PASTRY',250,110,300,701,'one days');
+insert into Item values(803,'ORANGE PASTRY',350,110,300,700,'one days');
+insert into Item values(804,'CHOCOLET PUFF PASTRY',400,110,300,703,'three days');
+insert into Item values(805,'SHORT CRUST PASTRY',300,110,300,704,'three days');
+insert into Item values(806,'VANILA PHYLO PASTRY',600,110,300,704,'three days');
+insert into Item values(807,'CHOCOLATE CRUST PASTRY',300,110,300,704,'three days');
+insert into Item values(808,'JAR VANILLA PASTRY',510,110,300,705,'four days');
+insert into Item values(809,'JAR CAKE BUTTER PASTRY',610,110,300,705,'four days');
+insert into Item values(810,'JAR RAINBOW PASTRY',450,110,300,705,'four days');
+insert into Item values(811,'OPERA PASTRY',350,110,300,706,'four days');
+insert into Item values(812,'CHOCOLATE CREAM ROLL',250,110,300,700,'two days');
+insert into Item values(813,'CHOCOLATE BROWNIE',430,110,300,700,'two days');
+insert into Item values(814,'STRAWBERRY SWIRL PASTRY',460,110,300,702,'two days');
+insert into Item values(815,'CHOCOLATE CAKE',1000,110,300,706,'three days');
+insert into Item values(816,'BUTTERSCOTCH CAKE',2000,110,300,703,'four days');
+insert into Item values(817,'CHOCO VANILA CAKE',450,110,300,702,'four days');
+insert into Item values(818,'CHOCO COFFEE CAKE',1100,110,300,707,'five days');
+insert into Item values(819,'RED VELVET PREMIUM CAKE',2000,110,300,707,'five days');
+insert into Item values(820,'COFFEE CAKE',600,110,300,708,'six days');
+insert into Item values(821,'CHERRY CAKE',1500,110,300,709,'six days');
+insert into Item values(822,'SUGAR DANISH BISCUITS',150,110,300,708,'seven days');
+insert into Item values(823,'MEXICAN BURGER',250,110,300,710,'three days');
+insert into Item values(824,'MEXICAN SUB SANDWICH',300,110,300,705,'three days');
+insert into Item values(825,'DRY CAKE',500,110,300,705,'eight days');
+insert into Item values(826,'CHOCOLATE COOKIES',450,110,300,710,'eight days');
+insert into Item values(827,'SHINGARA',50,110,300,703,'one days');
+select * from item;
+
+
